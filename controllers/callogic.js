@@ -105,6 +105,33 @@ module.exports = {
         return output;
     },
 
+
+    
+module.exports = {
+    // Calculator 
+    cal: function (num1, symbol, num2) {
+        if ( symbol == + ) {
+            base_amount = num1 + num2;
+        }
+        else if (symbol == -) {
+            base_amount = num1 - num2;               
+            }       
+        }
+        else if (symbol == *) {
+            base_amount = num1 * num2;              
+            }      
+        }
+        else if (symbol == /) {
+            base_amount = num1/num2;            
+            }   
+        }
+
+        var output = {
+            "output_value": base_amount
+        }
+        return output;
+    }
+
  // Calculate EMI 
      emi_cal: function (l_type, loan_amnt, i_rate, i_time) {
         
@@ -189,7 +216,9 @@ module.exports = {
         }
     return inrValue;    
     },
+
 // Similarly functions need to be built for other calculators
+
 
 };
   
