@@ -21,3 +21,5 @@ The application is available for use via the URL: https://cal-app-osse-28.heroku
 ### Contribution
 Contirbutors are welcome to provide their feedback and also contribute further logics for different calculators.
 added API for getting loan emi details
+
+Anirudh - Added the module to calculate the EMI rate and the tax deduction rate for the investments. Added the HTML code to display the required details.
