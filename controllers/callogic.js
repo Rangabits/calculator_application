@@ -204,7 +204,22 @@ module.exports = {
                 break;
             case "AUD":
                 inrValue = amount * 54.46;
-                break;           
+                break; 
+	    case "EUR":
+                inrValue = amount * 81.11;
+                break; 
+	    case "JPY":
+                inrValue = amount * 0.59;
+                break;
+	    case "GBP":
+                inrValue = amount * 94.96;
+                break;
+	    case "RUB":
+                inrValue = amount * 1.16;
+                break;
+	    case "SGD":
+                inrValue = amount * 55.55;
+                break;		
             default:
                 inrValue = amount;
         }
