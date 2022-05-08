@@ -105,32 +105,26 @@ module.exports = {
         return output;
     },
 
-
-    
-module.exports = {
     // Calculator 
     cal: function (num1, symbol, num2) {
-        if ( symbol == + ) {
+        if ( symbol == '+' ) {
             base_amount = num1 + num2;
         }
-        else if (symbol == -) {
+        else if (symbol == '-') {
             base_amount = num1 - num2;               
-            }       
+        }       
+        else if (symbol == '*') {
+            base_amount = num1 * num2;                 
         }
-        else if (symbol == *) {
-            base_amount = num1 * num2;              
-            }      
-        }
-        else if (symbol == /) {
-            base_amount = num1/num2;            
-            }   
+        else if (symbol == '/') {
+            base_amount = num1/num2;
         }
 
         var output = {
             "output_value": base_amount
         }
         return output;
-    }
+    },
 
  // Calculate EMI 
      emi_cal: function (l_type, loan_amnt, i_rate, i_time) {
@@ -200,21 +194,21 @@ module.exports = {
     // Currency Calculator
     currency_convertor: function (amount, inputCurrencyAbbreviation) {
      
-     var inrValue = 0;
-     switch(inputCurrencyAbbreviation) {
-        case "USD":
-            inrValue = amount * 72.1;
-            break;
-        case "CAD":
-            inrValue = amount * 61.34;
-            break;
-        case "AUD":
-            inrValue = amount * 54.46;
-            break;           
-        default:
-            inrValue = amount;
+        var inrValue = 0;
+        switch(inputCurrencyAbbreviation) {
+            case "USD":
+                inrValue = amount * 72.1;
+                break;
+            case "CAD":
+                inrValue = amount * 61.34;
+                break;
+            case "AUD":
+                inrValue = amount * 54.46;
+                break;           
+            default:
+                inrValue = amount;
         }
-    return inrValue;    
+        return inrValue;    
     },
 
 // Similarly functions need to be built for other calculators

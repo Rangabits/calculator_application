@@ -21,7 +21,10 @@ app.get('/cal_app/inv_cal/:salary/:age', apicall.inv_cal);
 app.get('/cal_app/emi_cal/:l_type/:p_amount/:i_rate/:i_time', apicall.emi_cal);
 
 // getting loan emi rates
-app.get('/cal_app/:emi_rate/:l_type', apicall.emi_rate);
+app.get('/cal_app/emi_rate/:emi_rate/:l_type', apicall.emi_rate);
+
+// getting loan emi rates
+app.get('/cal_app/curr_conv/:amount/:curr_type', apicall.currency_convertor);
 
 // Similar calls to be made for other calculators as per need
 
