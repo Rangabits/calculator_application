@@ -30,7 +30,8 @@ exports.emi_rate = (req, res) =>{
 //  route the call to currency calculator and get the data to be sent to caller
 exports.currency_convertor = (req, res) =>{
   var amount = parseInt(req.params.amount);
-  var inputCurrency= req.params.currency;
+  var inputCurrency = req.params.currency;
+  
   output = callogic.currency_convertor(amount, inputCurrency);
   res.send(output);
 }

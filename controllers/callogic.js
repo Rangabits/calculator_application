@@ -197,7 +197,7 @@ module.exports = {
         var inrValue = 0;
         switch(inputCurrencyAbbreviation) {
             case "USD":
-                inrValue = amount * 72.1;
+                inrValue = amount * 72.1;            
                 break;
             case "CAD":
                 inrValue = amount * 61.34;
@@ -208,7 +208,13 @@ module.exports = {
             default:
                 inrValue = amount;
         }
-        return inrValue;    
+
+        var output = {
+            "Amount": amount,
+            "Currency": inputCurrencyAbbreviation,
+            "INR_Equivalent": inrValue,
+        }
+        return output;
     },
 
 // Similarly functions need to be built for other calculators
