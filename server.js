@@ -15,16 +15,16 @@ app.get('/', (req, res) => {
 });
 
 // getting investment proposed amount
-app.get('/cal_app/inv_cal/:salary/:age', apicall.inv_cal);
+app.get('/inv_cal/:salary/:age', apicall.inv_cal);
 
 // getting loan emi details
-app.get('/cal_app/emi_cal/:l_type/:p_amount/:i_rate/:i_time', apicall.emi_cal);
+app.get('/emi_cal/:l_type/:p_amount/:i_rate/:i_time', apicall.emi_cal);
 
 // getting loan emi rates
-app.get('/cal_app/emi_rate/:emi_rate/:l_type', apicall.emi_rate);
+app.get('/emi_rate/:emi_rate/:l_type', apicall.emi_rate);
 
 // getting currency converter
-app.get('/cal_app/curr_conv/:amount/:currency', apicall.currency_convertor);
+app.get('/curr_conv/:amount/:currency', apicall.currency_convertor);
 
 // Similar calls to be made for other calculators as per need
 

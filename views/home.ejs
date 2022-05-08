@@ -19,7 +19,7 @@
     <p> An open source REST APIs repository for financial calculators</p>
     </center>
     <br> <br> 
-    <h4>1. GET:  /cal_app/inv_cal//salary/age</h4>
+    <h4>1. GET:  /inv_cal/salary/age</h4>
         <p>Proposes the annual investment details and gains based on Salary and Age.</p>
         <h5>Result:</h5>
         <pre> HighRisk: Amount to investing in high risk investments.
@@ -31,38 +31,76 @@
             <br> Investment_Gain: Estimated Gain from investments as of current rate.
             <br> Bank_Gain: Estimated Gain from Bank savings as of current rate.
         </pre>
+        <b> Sample input </b> -  <a href = 'https://cal-app-osse-28.herokuapp.com/inv_cal/20000/32'>https://cal-app-osse-28.herokuapp.com/inv_cal/20000/32</a>
+        <br>
+        <b> Sample output </b> - {"Type":"Investment Proposal for 5 Years","Amount":6000,"HighRisk":"1200-1800","MidRisk":"1200-1800","LowRisk":"1800-2400","Invested_Amount":30000,"Estimated_Investment_Returns":34800,"Estimated_Bank_Returns":32100,"Investment_Gain":4800,"Bank_Gain":2100}
     <br> <br>
     
-     <h4>2. GET: /cal_app/curr_conv</h4>
-        <p>Converts input amount into Indian Currency Equivalent.</p>
+     <h4>2. GET: /curr_conv/amount/currency</h4>
+        <p>Converts input amount into INR equivalent.</p>
         <h5>Supported Currencies:</h5>
-        <pre>USD
-            <br>CAD
-            <br>AUD
-            <br>EUR
-            <br>JPY
-            <br>GBP
-            <br>RUB
-            <br>SGD
+        <ul>
+            <li>USD</li>
+            <li>CAD</li>
+            <li>AUD</li>
+            <li>EUR</li>
+            <li>JPY</li>
+            <li>GBP</li>
+            <li>RUB</li>
+            <li>SGD</li>
+        </ul>
+        <h5>Result:</h5>
+        <pre> Amount: Amount to be converted.
+            <br> Currency: Currency of Amount.
+            <br> INR_Equivalent: Converted amount.
         </pre>
-	<h4> Sample input -  <a href = 'https://cal-app-osse-28.herokuapp.com/cal_app/curr_conv/100/USD'>https://cal-app-osse-28.herokuapp.com/cal_app/curr_conv/100/USD</h4>
-    <br>
-    <h4> Sample output - {"Amount":100,"Currency":"USD","INR_Equivalent":7209.999999999999}</h4>
+	<b> Sample input </b> -  <a href = 'https://cal-app-osse-28.herokuapp.com/curr_conv/100/USD'>https://cal-app-osse-28.herokuapp.com/curr_conv/100/USD</a>
+	<br>    
+    <b> Sample output </b> - {"Amount":100,"Currency":"USD","INR_Equivalent":7209.999999999999}
     <br> <br>
     
     <h4>3. GET:  /emi_rate/l_type</h4>
-        <p>Proposes a emi rate based on the selected Loan Category.</p>
+        <p>Proposes an emi rate based on the selected Loan Category.</p>
+        <h5>Loan Categories:</h5>
+        <ul>
+            <li>P - Personal Loan</li>
+            <li>E - Education Loan</li>
+            <li>H - Home Loan</li>
+            <li>A - Automobile Loan</li>
+        </ul>
+        <h5>Result:</h5>
         <pre>
-            <br> Rate_Pers_Loan: 10%.
-            <br> Rate_Edu_Loan: 6%.
-            <br> Rate_Home_Loan: 11%.
-            <br> Rate_Auto_Loan: 12%.
+            <br> Rate_Pers_Loan: Pecentage.
+            <br> Rate_Edu_Loan: Pecentage.
+            <br> Rate_Home_Loan: Pecentage.
+            <br> Rate_Auto_Loan: Pecentage.
         </pre>
-	<h4> Sample input - <a href = 'https://cal-app-osse-28.herokuapp.com/cal_app/emi_rate/10/P'>https://cal-app-osse-28.herokuapp.com/cal_app/emi_rate/10/P </h4>
+    <b> Sample input </b>  - <a href = 'https://cal-app-osse-28.herokuapp.com/emi_rate/10/P'>https://cal-app-osse-28.herokuapp.com/emi_rate/10/P </a>
 	<br>
-	<h4> Sample output - {"Rate_Pers_Loan":10,"Rate_Edu_Loan":6,"Rate_Home_Loan":11,"Rate_Auto_Loan":12} </h4>
+	<b> Sample output </b> - {"Rate_Pers_Loan":10,"Rate_Edu_Loan":6,"Rate_Home_Loan":11,"Rate_Auto_Loan":12}
     <br> <br>
-    
+
+    <h4>4. GET:  /emi_rate/l_type</h4>
+        <p>Proposes an emi rate based on the selected Loan Category.</p>
+        <h5>Loan Categories:</h5>
+        <ul>
+            <li>P - Personal Loan</li>
+            <li>E - Education Loan</li>
+            <li>H - Home Loan</li>
+            <li>A - Automobile Loan</li>
+        </ul>
+        <h5>Result:</h5>
+        <pre>
+            <br> Rate_Pers_Loan: Pecentage.
+            <br> Rate_Edu_Loan: Pecentage.
+            <br> Rate_Home_Loan: Pecentage.
+            <br> Rate_Auto_Loan: Pecentage.
+        </pre>
+    <b>Sample input</b> - <a href = 'https://cal-app-osse-28.herokuapp.com/emi_rate/10/P'>https://cal-app-osse-28.herokuapp.com/emi_rate/10/P </a>
+	<br>
+	<b> Sample output </b> - {"Rate_Pers_Loan":10,"Rate_Edu_Loan":6,"Rate_Home_Loan":11,"Rate_Auto_Loan":12}
+    <br> <br>
+
 </div>
 
 </body>
