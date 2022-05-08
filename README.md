@@ -1,7 +1,7 @@
 # calculator_application
 
 ### Purpose 
-This is an open open source application that can help support various *Monetary Calculations* like **Budget, Investments, Loan, Savings,** etc.
+This is an open open source application that can help support various *Monetary Calculations* like **Budget, Investments, Loan, Savings, Currency Conversion** etc.
 
 ### License
 This open source application comes with a *MIT License*.
@@ -12,7 +12,7 @@ The application is develped using NodeJS and consists of various APIs to perfrom
 
 1. The ***Investment Calculator*** takes in the salary and age of an individual and proposes an amout the person should invest in differnet types of investment areas and projects an approximate compounded return in 5 years and compares this to Bank FDs as of the current interest rate.
 2. calculate simple intrest & Compund intrest on the investment
-
+3. **Currency Converto** takes in amount and Foreign Currency and return Indian rupee equivalent value
 
 ### Availability
 The application is available for use via the URL: https://cal-app-osse-28.herokuapp.com/
